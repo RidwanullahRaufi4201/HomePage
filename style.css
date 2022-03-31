@@ -1,53 +1,681 @@
-#table1,td{
-    border: 1px solid black;
-    padding: 5px;
-    margin: 2px;
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          transition: all 2s;
+}
+
+body {
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  width: 100%;
+}
+
+header nav {
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5px;
+}
+
+
+header {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  z-index: 1000;
+}
+
+header nav {
+  border-bottom: 1ps solid gray;
+}
+
+header nav .logo {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          position: relative;
+}
+
+header nav .logo span {
+  font-size: 25px;
+  color: white;
+
+}
+header nav .logo span::before{
+  content: '';
+  color: white;
+  animation: logo 2s infinite linear;
+  animation-direction: alternate;
 
 
 }
-
-#tr1 td{
-    font-weight: 900;
-}
-td{
-    padding: 5px;
-}
-
-#div1{
-    width: 50%;
-    
-    margin: 5px auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-
-}
-
-#image{
-    width: 50%;
-
-    margin: 5px auto;
-   
-    display: flex;
-    justify-content: center;
-}
-#image img{
-    width: 60%;
-    height: 440px;
-
-
-}
-
-#perposal{
-    width: 50%;
-    margin: 5px auto;
-}
-
-strong{
-    font-size: 20px;
+/* 𝓒𝓸𝓭𝓮𝓐𝓬𝓪𝓭𝓮𝓶𝔂 */
+@keyframes logo{
+  5%{
+    content: '𝓡';
+  }
+  10%{
+    content: '𝓡𝓒';
+  }
+  20%{
+    content: '𝓡𝓒𝓸';
+  }
+  40%{
+    content: '𝓡𝓒𝓸𝓭';
+  }
+  50%{
+    content: '𝓡𝓒𝓸𝓭𝓮';
+  }
+  60%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐';
+  }
+  70%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐𝓬';
+  }
+  75%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐𝓬𝓪';
+  }
+  80%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐𝓬𝓪𝓭';
+  }
+  85%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐𝓬𝓪𝓭𝓮';
+  }
+  90%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐𝓬𝓪𝓭𝓮𝓶';
+  }
+  100%{
+    content: '𝓡𝓒𝓸𝓭𝓮𝓐𝓬𝓪𝓭𝓮𝓶𝔂';
+  }
 }
 
-body{
-    background-color: ghostwhite;
-    color: black;
+header nav .logo {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  cursor: pointer;
+}
+
+header nav .logo img {
+  width: 50%;
+}
+
+header nav .logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header nav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header nav .menu ul li {
+  list-style: none;
+}
+
+header nav .menu ul li .home {
+  color: #e0e021;
+}
+
+header nav .menu ul li a {
+  text-decoration: none;
+  color:white;
+  font-size:18px;
+  text-transform: uppercase;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+header nav .menu ul li a:hover {
+  color: yellow;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+main #hero {
+  width: 100%;
+  height: 90vh;
+  background-image: url(../images/an6.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: azure;
+   /* -webkit-animation: bgchange 15s infinite linear;
+          animation: bgchange 15s infinite linear;
+  -webkit-animation-duration: alternate;
+          animation-duration: alternate;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;  */
+}
+
+main #hero div {
+  position: relative;
+  top: 20%;
+  left: -20%;
+  width: 40%;
+}
+
+main #hero div h1 {
+  font-size: 25px;
+}
+
+main #hero div .btn1 {
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 3px;
+  background-color: darkslateblue;
+  text-decoration: none;
+  color: white;
+}
+
+@-webkit-keyframes bgchange {
+  20% {
+    background-image: url(../images/bg3.jpg);
+  }
+  40% {
+    background-image: url(../images/bg6.jfif);
+  }
+  60% {
+    background-image: url(../images/bg1.jpg);
+  }
+  80% {
+    background-image: url(../images/bg1.jpg);
+  }
+}
+
+@keyframes bgchange {
+  /* 5% {
+    background-image: url(../images/an1.jpg);
+  } */
+  25% {
+    background-image: url(../images/an2.jpg);
+  }
+  50% {
+    background-image: url(../images/an3.jpg);
+  }
+  70% {
+    background-image: url(../images/an4.jpg);
+  }
+  90% {
+    background-image: url(../images/an5.jpg);
+  }
+  100% {
+    background-image: url(../images/an6.jpg);
+  }
+}
+
+.features {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  margin-block: 30px;
+}
+
+.features h1 {
+  text-align: center;
+}
+
+.features p {
+  text-align: center;
+}
+
+.features .featurescard {
+  width: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features .featurescard .card1 {
+  overflow: hidden;
+  border-radius: 5px;
+  margin-block: 5px;
+  width: 30%;
+  height: 230px;
+  background-color: whitesmoke;
+  padding: 20px;
+  color: black;
+  text-align: center;
+}
+
+.features .featurescard .card1 h2 {
+  font-size: 20px;
+  color: black;
+}
+
+.features .featurescard .card1 i {
+  font-size: 30px;
+}
+
+
+.ourcourse {
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.ourcourse .courses {
+  width: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (30%);
+      grid-template-columns: repeat(3, 30%);
+  -ms-grid-rows: (40%);
+      grid-template-rows: repeat(3, 40%);
+  gap: 35px;
+  padding: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ourcourse .courses .course1 {
+  background-color: white;
+  position: relative;
+  text-align: start;
+  border-radius: 5px;
+}
+
+.ourcourse .courses .course1 img {
+  width: 100%;
+}
+
+.ourcourse .courses .course1 p {
+  margin: 0;
+}
+
+.ourcourse .courses .course1 h1 {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ourcourse .courses .course1 i {
+  color: yellow;
+}
+
+.ourcourse .courses .course1 div {
+  position: absolute;
+  background-color: darkslateblue;
+  color: white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 50%;
+  bottom: 48px;
+  right: 20px;
+}
+
+.account {
+  padding-block: 30px;
+  width: 100%;
+  height: 500px;
+  background-image: url(../images/bgsecond.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+.account div {
+  width: 24%;
+  height: 90%;
+  padding: 15px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.account div input {
+  width: 90%;
+  margin-inline: auto;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.account div h2 {
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+
+.account div button {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.experts {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.experts .exp {
+  width: 90%;
+  margin: 0% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.experts .exp .exp1 {
+  width: 25%;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  color: #4e4c4c;
+}
+
+.experts .exp .exp1 img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.experts .exp .exp1 h3 {
+  margin: 0;
+}
+
+.experts .exp .exp1 div {
+  margin: 0;
+}
+
+.experts .exp .exp1 div i {
+  margin: 0%;
+  font-size: 25px;
+}
+
+.experts .exp .exp1 div i:hover {
+  color: blue;
+}
+
+footer {
+  background-color: rgba(0, 0,0, 0.7);
+  color: white;
+  padding-block: 70px;
+  padding-inline: 30px;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+}
+
+footer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer > div > div h2 {
+  font-size: 20px;
+}
+
+footer > div > div h4 {
+  font-size: 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  cursor: pointer;
+  color: gray;
+}
+
+footer > div > div h4:hover {
+  color: yellow;
+}
+
+
+/* about us */
+
+
+.sect01{
+  width: 100%;
+  height: 85vh;
+  background:url(../images/aboutus6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: white
+  
+}
+.sect02{
+  width: 100%;
+  margin: 100px 0;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.sect02 .img{
+  width: 40%;
+  height: 450px;
+  border-radius: 5px;
+}
+.sect02 .img img{
+  width: 90%;
+ height: 100%;
+ border-radius: 5px;
+}
+.sect02 .content{
+  width: 40%;
+  background-color: white;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+
+
+.tr{
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+
+  margin: 80px 0;
+}
+
+
+.tr>div{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  margin-top: 40px;
+}
+.tr>div img{
+  width: 10%;
+  border-radius: 50%;
+}
+
+
+
+.first{
+  background-image: url(../images/m.webp);
+  position: relative;
+  top: 20%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+
+.second{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.second .leftside{
+  width: 40%;
+  border-radius: 15px;
+}
+.second .leftside img{
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.second .rightside{
+  width: 40%;
+  
+}
+.second .rightside h5{
+  cursor: pointer;
+  font-size: 15px;
+}
+.second .rightside h5:hover{
+  color: #e0e021;
+}
+
+
+.blogs {
+  padding: 75px;
+}
+.blogs .leftside{
+  width: 40%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.blogs .leftside img{
+  width: 100%;
+  border-radius: 15px;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+
+.awl{
+  background-image: url(../images/course1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ margin-bottom: 40px;
+}
+.awl h1{
+  font-size: xx-large;
+}
+
+
+
+
+.doo{
+  width: 100%;
+  padding: 60px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.doo .chap{
+  width: 40%;
+  border-radius: 14px;
+}
+.doo .chap img{
+  width: 100%;
+  height: 400px;
+  border-radius: 14px;
+}
+
+.doo .rast{
+  background-color:whitesmoke;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+}
+
+.doo .rast h3{
+  width: 100%;
 }
